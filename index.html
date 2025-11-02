@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Chamber of Commerce Project">
+  <meta name="author" content="Omega Nanseta">
+  <title>Omega Nanseta | Home</title>
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/larger-index.css">
+  <link rel="stylesheet" href="styles/small-index.css" media="screen and (max-width: 600px)">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <script src="scripts/course.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="images/logo.svg" alt="Site Logo" class="logo">
+
+      <span class="site-name">Web and Programming Course</span>
+    </div>
+    <button id="menu-btn" aria-label="Toggle Menu">&#9776;</button>
+    <nav id="nav-menu">
+      <a href="index.html" class="active">Home</a>
+      <a href="chamber">Chamber</a>
+      <a href="final">Final</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Home</h1>
+
+    <section>
+      <h2>About me</h2>
+      <p >This project is about my journey of getting web and programming certificate. It been a dream of mine to one day getting a degree so when i came across an opportunity of studying at Byu i was very happy. Its been such a journey late nights, exhaustion and celebrations. Being a mother and a wife also increased pressure but through the guidance of the holy spirit i have managed to finish this c certificate. and this gives me courage to keep on striving until i get the highest degree of software development. For i know God and holy spirit will be my guide as they have been with me all this while they will never leave me now. This term am doing last course of this ccertificate and i thank God for his mercy and love for allowing such a thing to happen to me. </p>
+    </section>
+
+    <section>
+      <h2>Certificate Courses</h2>
+      <div class="course-filters">
+        <button id="all">All Courses</button>
+        <button id="wdd">WDD Courses</button>
+        <button id="cse">CSE Courses</button>
+        
+      </div>
+      <div id="courseContainer" class="course-grid"></div>
+      <p id="totalCredits"></p>
+    </section>
+
+    <section>
+      <h2>Goals</h2>
+      <p>My goal is to become a professional software developer and create technology-driven solutions for agriculture and healthcare in Malawi.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="social">
+      <a href="https://github.com/yourgithub" target="_blank" aria-label="GitHub">
+        <img src="images/github.svg" alt="GitHub icon">
+      </a>
+      <a href="https://Facebook.com/in/yourFacebook" target="_blank" aria-label="LinkedIn">
+        <img src="images/facebook.svg" alt="facebook icon">
+      </a>
+      <a href="#" aria-label="Twitter">
+        <img src="images/twitter.svg" alt="Twitter icon">
+      </a>
+    </div>
+
+    <div class="info">
+      <p>&copy; <span id="year"></span> | Omega Nanseta | Malawi</p>
+      <p id="lastModified"></p>
+    </div>
+  </footer>
+</body>
+</html>
