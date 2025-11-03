@@ -1,3 +1,4 @@
+/* ========= ROOT VARIABLES ========= */
 :root {
   --primary-color: #004d40;
   --secondary-color: #80cbc4;
@@ -6,21 +7,23 @@
   --font-family: 'Roboto', sans-serif;
 }
 
+/* ========= GLOBAL STYLES ========= */
 body {
   margin: 0;
   font-family: var(--font-family);
-  background: var(--bg-color);
+  background-color: var(--bg-color);
   color: var(--text-color);
 }
 
-/* Header */
+/* ========= HEADER ========= */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: var(--primary-color);
+  background-color: var(--primary-color);
   color: white;
-  padding: 1rem;
+  padding: 1rem 2rem;
+  position: relative;
 }
 
 .logo-container {
@@ -34,15 +37,22 @@ header {
   height: 40px;
 }
 
+.site-name {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Hamburger button (hidden on large screens) */
 #menu-btn {
   background: none;
   border: none;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   display: none;
+  cursor: pointer;
 }
 
-/* Navigation */
+/* ========= NAVIGATION ========= */
 nav {
   display: flex;
   gap: 1rem;
@@ -51,15 +61,186 @@ nav {
 nav a {
   color: white;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
+  transition: 0.3s;
 }
 
-nav a.active,
-nav a:hover {
+nav a:hover,
+nav a.active {
   text-decoration: underline;
 }
 
-/* Responsive Navigation */
+/* ========= MAIN CONTENT ========= */
+main {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+main h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+/* ========= ABOUT SECTION ========= */
+.about-section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  align-items: start;
+  margin-bottom: 3rem;
+}
+
+/* About text card */
+.about-text {
+  background: white;
+  border: 2px solid var(--secondary-color);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.about-text h2 {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 0.75rem 1rem;
+  margin: 0;
+  border-radius: 6px 6px 0 0;
+  font-size: 1.3rem;
+}
+
+.about-text p {
+  padding: 1rem;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.student-photo {
+  background: white;
+  border: 2px solid var(--secondary-color);
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.student-photo h2 {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 0.5rem;
+  border-radius: 6px;
+  width: 100%;
+  text-align: left;
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+.student-photo img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+section h2 {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 6px 6px 0 0;
+  margin-bottom: 1rem;
+}
+
+.course-filters {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.course-filters button {
+  background: white;
+  border: 2px solid var(--secondary-color);
+  color: var(--primary-color);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.course-filters button:hover {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+/* Course cards grid */
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+
+.course {
+  background: white;
+  border: 2px solid var(--secondary-color);
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.course.completed {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+#totalCredits {
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+/* ========= FOOTER ========= */
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem;
+  gap: 0.5rem;
+}
+
+footer .social {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+footer .social img {
+  width: 28px;
+  height: 28px;
+  filter: invert(1);
+  transition: transform 0.3s;
+}
+
+footer .social img:hover {
+  transform: scale(1.1);
+}
+
+footer p {
+  margin: 0.3rem 0;
+  font-size: 0.9rem;
+}
+
+/* ========= RESPONSIVE NAVIGATION ========= */
 @media (max-width: 768px) {
   #menu-btn {
     display: block;
@@ -68,64 +249,25 @@ nav a:hover {
   nav {
     display: none;
     flex-direction: column;
-    background: var(--primary-color);
     position: absolute;
-    top: 60px;
+    background: var(--primary-color);
+    top: 65px;
     right: 0;
-    width: 200px;
-    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #00695c;
   }
 
   nav.show {
     display: flex;
   }
-}
 
-/* Main content */
-main {
-  padding: 1rem 2rem;
-}
+  nav a {
+    padding: 1rem;
+    border-bottom: 1px solid #00695c;
+  }
 
-section {
-  margin: 2rem 0;
-}
-
-/* Courses */
-.course-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.course {
-  border: 2px solid var(--secondary-color);
-  border-radius: 8px;
-  padding: 1rem;
-  background: white;
-}
-
-.course.completed {
-  background: var(--secondary-color);
-  color: white;
-}
-
-/* Footer */
-footer {
-  background: var(--primary-color);
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1rem;
-  gap: 1rem;
-}
-
-footer img {
-  width: 24px;
-  height: 24px;
-}
-
-footer .social a {
-  margin: 0 0.5rem;
+  .about-section {
+    grid-template-columns: 1fr;
+  }
 }

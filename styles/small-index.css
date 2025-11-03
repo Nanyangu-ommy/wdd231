@@ -1,0 +1,138 @@
+/* Small Screen (Mobile) Styles */
+
+:root {
+  --primary-color: #004d40;
+  --secondary-color: #80cbc4;
+  --text-color: #333;
+  --bg-color: #f5f5f5;
+  --font-family: 'Roboto', sans-serif;
+}
+
+/* General body adjustments */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  background: var(--bg-color);
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--primary-color);
+  color: white;
+  padding: 1rem;
+  position: relative;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo {
+  width: 36px;
+  height: 36px;
+}
+
+#menu-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+  display: block; /* Show hamburger on small screens */
+}
+
+/* NAVIGATION */
+nav {
+  display: none;
+  flex-direction: column;
+  background: var(--primary-color);
+  position: absolute;
+  top: 65px;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid #00695c;
+}
+
+nav.show {
+  display: flex;
+}
+
+nav a {
+  color: white;
+  padding: 1rem;
+  text-decoration: none;
+  border-bottom: 1px solid #00695c;
+}
+
+nav a:hover {
+  background-color: var(--secondary-color);
+}
+
+/* MAIN CONTENT */
+main {
+  padding: 1rem;
+}
+
+/* About Section */
+.about-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.about-section h2 {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 0.5rem;
+  border-radius: 5px 5px 0 0;
+}
+
+.about-section p {
+  background: white;
+  padding: 1rem;
+  border: 1px solid var(--secondary-color);
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+}
+
+.student-image {
+  text-align: center;
+}
+
+.student-image img {
+  width: 90%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Course Filters */
+.course-filters {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.5rem;
+}
+
+.course-filters button {
+  background-color: white;
+  border: 2px solid var(--secondary-color);
+  color: var(--primary-color);
+  padding: 0.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.course-filters button:hover {
+  background-color: var(--secondary-color);
+  color: white;
+}
