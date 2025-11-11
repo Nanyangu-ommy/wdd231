@@ -1,11 +1,7 @@
-/* ----------------------------------------------------------------- */
-/* Mobile First Styling (Applied for screens up to 600px) */
-/* ----------------------------------------------------------------- */
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: lato, sans-serif;
     color: #333;
-    /* Prevent horizontal scrolling */
     overflow-x: hidden; 
 }
 
@@ -14,10 +10,8 @@ main {
 }
 
 h1, h2 {
-    color: #004d40; /* Dark Teal */
+    color: #004d40; 
 }
-
-/* --- Header and Navigation --- */
 
 header {
     background-color: #004d40;
@@ -26,7 +20,6 @@ header {
     display: flex;
     flex-direction: column;
     position: relative;
-    /* Ensure no padding on sides so content can breathe */
     padding-left: 1rem;
     padding-right: 1rem;
 }
@@ -61,7 +54,6 @@ nav ul {
     margin: 0;
 }
 
-/* Show menu when JS toggles the 'open' class */
 nav ul#navMenu.open {
     display: flex;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
@@ -138,21 +130,19 @@ nav li:last-child a {
     display: none;
 }
 
-/* Reduce vertical space in list view */
 #members.list p,
 #members.list a {
     margin: 0.2rem 0;
     font-size: 0.9rem;
 }
 
-/* --- Footer --- */
 footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 1rem;
     font-size: 0.8rem;
-    display: block; /* Use block layout for vertical stacking on mobile */
+    display: block; 
 }
 
 footer p {
