@@ -1,0 +1,69 @@
+{
+  "companies": [
+    {
+      "name": "GreenGrow Farms",
+      "address": "Plot 45, Area 25, Lilongwe",
+      "phone": "+265 991 234 567",
+      "website": "https://greengrow.mw",
+      "imagefile": "images/farm.jpg",
+      "membershipLevel": 3,
+      "description": "Leading producer of organic vegetables."
+    },
+    {
+      "name": "TechLink Malawi",
+      "address": "City Center, Lilongwe",
+      "phone": "+265 881 234 890",
+      "website": "https://techlink.mw",
+      "imagefile": "images/tech2.jpg",
+      "membershipLevel": 2,
+      "description": "IT and software development firm."
+    },
+    {
+      "name": "Sunrise Textiles",
+      "address": "Industrial Area, Blantyre",
+      "phone": "+265 881 345 678",
+      "website": "https://sunrisetextiles.mw",
+      "imagefile": "images/sunrise.png",
+      "membershipLevel": 3,
+      "description": "Manufacturer of high-quality textiles."
+    },
+    {
+      "name": "Lilongwe Bakery",
+      "address": "Lilongwe market, Oldtown",
+      "phone": "+265 991 234 567",
+      "website": "https://www.lilongwebakery.com",
+      "imagefile": "images/bakery.jpg",
+      "membershipLevel": 2,
+      "slogan": "Fresh baked daily for you."
+    },
+    {
+      "name": "Prime Tech Solutions",
+      "address": "202 Tech street, Lilongwe",
+      "phone": "+265 987 654 322",
+      "website": "https://www.primetech.com",
+      "imagefile": "images/tech1.jpg",
+      "membershipLevel": 2,
+      "slogan": "Your partner in digital growth."
+    },
+    {
+      "name": "Local Insurance Group",
+      "address": "303 Main St, City Center",
+      "phone": "+265 881 555 000",
+      "website": "https://www.localinsure.com",
+      "imagefile": "images/insurance.jpg",
+      "membershipLevel": 1,
+      "slogan": "Coverage you can trust."
+    },
+    {
+      "name": "Healthy Living Pharmacy",
+      "address": "505 Wellness Rd, Oldtown",
+      "phone": "+265 881 777 888",
+      "website": "https://www.healthylivingpharmacy.com",
+      "imagefile": "images/pharmacy.jpg",
+      "membershipLevel": 1,
+      "slogan": "Your health, our priority."
+    }
+  ]
+}
+    
+
