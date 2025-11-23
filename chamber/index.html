@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Welcome to the Lilongwe Chamber of Commerce. Supporting local business growth and community development." />
+    <meta name="author" content="Omega Nanseta" />
+    <title>Lilongwe Chamber of Commerce | Home</title>
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small-directory.css"> 
+    <link rel="stylesheet" href="styles/larger-directory.css"> 
+
+    <script src="scripts/index.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>Lilongwe Chamber of Commerce</h1>
+        <nav>
+            <button id="menuButton">☰</button>
+            <ul id="navMenu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="home-grid">
+        <section class="hero">
+            <picture>
+    
+                <img src="images/lilongwe1.jpg" alt="Lilongwe city view" loading="lazy">
+            </picture>
+            <div class="hero-text">
+                <h2>Building Business. Strengthening Community.</h2>
+                <a class="cta-button" href="join.html">Join the Chamber</a>
+            </div>
+        </section>
+
+        <section class="events">
+            <h2>📢 Upcoming Events</h2>
+            <div class="event-card">
+                <h3>Business Networking Luncheon</h3>
+                <p>Friday, 12:00 PM | Chamber Office Auditorium</p>
+                <a href="#">Learn more...</a>
+            </div>
+            <div class="event-card">
+                <h3>Digital Marketing Workshop</h3>
+                <p>Saturday, 9:00 AM | Lilongwe Convention Center</p>
+                <a href="#">Register here...</a>
+            </div>
+        </section>
+
+        <section class="weather">
+            <h2>☁️ Weather in Lilongwe</h2>
+            <div id="current-weather-display">
+                <p>Current Temp: <span id="currentTemp">--</span></p>
+                <p>Conditions: <span id="weatherDesc">--</span></p>
+            </div>
+            <div id="forecast-display">
+                <h3>3-Day Forecast</h3>
+                <div id="forecast">Loading forecast...</div>
+            </div>
+        </section>
+
+        <section class="spotlights">
+            <h2>✨ Member Spotlights</h2>
+            <div id="spotlightContainer">
+                <p>Loading random spotlights...</p>
+            </div>
+        </section>
+
+        <section class="join-us">
+            <h2>Become a Member!</h2>
+            <p>Gain exposure, network with leaders, and grow your business today.</p>
+            <a href="join.html" class="cta-button">Apply Now →</a>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Lilongwe Chamber of Commerce</p>
+        <p>🌸Developed by Omega Nanseta | WDD 231🌸</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+
+</body>
+</html>

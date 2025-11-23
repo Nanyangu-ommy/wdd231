@@ -1,206 +1,298 @@
+/* ============================
+   GLOBAL VARIABLES
+============================ */
+:root {
+    --primary-color: #004d40;
+    --secondary-color: #ffca28;
+    --light-color: #ffffff;
+    --dark-color: #222;
+    --radius: 10px;
+}
 
+/* ============================
+   BASE STYLES
+============================ */
 body {
-    font-family: 'Lato', sans-serif;
-    color: #333;
-    max-width: 1400px;
+    font-family: "Lato", sans-serif;
     margin: 0 auto;
-    background-color: #41b45a; 
+    max-width: 1400px;
+    background: #41b45a;
+    color: #333;
 }
 
-main {
-    padding: 1rem 2rem;
-}
-
-h1, h2 {
-    color: #004d40; 
-    font-weight: 700;
-}
-
-
+/* ============================
+   HEADER + NAV
+============================ */
 header {
-    background-color: #004d40; /* Dark Teal Header Background */
-    color: white;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-header h1 {
-    color: white;
-    margin: 0;
-    font-size: 1.8rem;
+    background: var(--primary-color);
+    color: var(--light-color);
+    padding: 1rem;
+    text-align: center;
 }
 
 #menuButton {
-    display: none; /* Hide the hamburger button on desktop */
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
 }
 
 nav ul {
-    display: flex; /* Make navigation links horizontal */
-    justify-content: flex-end;
-    gap: 1.5rem;
-    width: auto;
-    list-style: none;
-    padding: 0;
+    display: none;
+    flex-direction: column;
+    background: var(--primary-color);
     margin: 0;
+    padding: 0;
+}
+
+nav ul.open {
+    display: flex;
+}
+
+nav li {
+    list-style: none;
 }
 
 nav li a {
+    display: block;
+    padding: 1rem;
     color: white;
     text-decoration: none;
-    padding: 8px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-    border-bottom: none;
+    border-bottom: 1px solid rgba(255,255,255,0.25);
 }
 
-nav li a:hover,
 nav li a.active {
-    background-color: rgba(255, 255, 255, 0.2);
+    background: rgba(255,255,255,0.25);
 }
 
+/* ============================
+   HERO SECTION (Index)
+============================ */
+.hero {
+    position: relative;
+    overflow: hidden;
+    
+}
 
-/* --- View Toggle Buttons --- */
+.hero img {
+    
+    width: 100%;
+    display: block;
+    height: auto;
+}
+
+.hero-text {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.4);
+    color: var(--light-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background: var(--secondary-color);
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 50px;
+    color: var(--dark-color);
+    margin-top: 1rem;
+    font-weight: 700;
+}
+
+/* ============================
+   EVENTS SECTION
+============================ */
+.events .event-card {
+    background: #004d40;
+    color: white;
+
+    padding: 1rem;
+    border-left: 5px solid var(--secondary-color);
+    margin-bottom: 1rem;
+    border-radius: var(--radius);
+}
+
+/* ============================
+   WEATHER SECTION
+============================ */
+.weather {
+    background: #004d40;
+    color: white;
+    padding: 1rem;
+    border-radius: var(--radius);
+}
+
+#current-weather-display {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+}
+
+#forecast {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* ============================
+   SPOTLIGHTS (Flex Row)
+============================ */
+#spotlightContainer {
+    display: flex;
+    background-color: #004d40;
+    color: white;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#spotlightContainer div {
+    background: white;
+    padding: 1rem;
+    border-radius: var(--radius);
+}
+
+/* ============================
+   DIRECTORY PAGE
+============================ */
+
+/* Toggle buttons */
 .view-toggle {
-    text-align: right;
-    margin-bottom: 1.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
 .view-toggle button {
-    padding: 8px 15px;
+    padding: 8px 16px;
+    border-radius: 5px;
     border: 1px solid #ccc;
-    background-color: #ffffff;
-    cursor: pointer;
-    margin-left: 5px;
-    border-radius: 4px;
-    transition: background-color 0.3s, color 0.3s;
+    background: white;
     font-weight: 600;
+    cursor: pointer;
 }
 
-.view-toggle button:hover {
-    background-color: #f0f0f0;
-}
-
-.view-toggle button.active {
-    background-color: #004d40;
+.view-toggle .active {
+    background: var(--primary-color);
     color: white;
-    border-color: #004d40;
 }
 
-/* --- 1. GRID View Styling (Card Layout) --- */
-
+/* GRID VIEW */
 #members.grid {
     display: grid;
-    /* Flexible grid: min 280px wide cards, adjusts column count */
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-    gap: 25px;
-    padding: 0;
+    grid-template-columns: 1fr;
+    gap: 1rem;
 }
 
 .member-item {
-    background-color: white;
-    border: 1px solid #e0e0e0;
-    padding: 1.5rem;
+    background: #004d40;
+    color: white;
+    padding: 1rem;
+    border-radius: var(--radius);
     text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s;
-}
-
-.member-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
 }
 
 .member-item img {
-    max-width: 150px;
-    height: auto;
-    margin-bottom: 1rem;
-    border-radius: 4px;
+    width: 120px;
+    border-radius: 5px;
 }
 
-.member-item h3 {
-    margin-top: 0;
-    font-size: 1.4rem;
-    color: #00796b;
-}
-
-.member-item p,
-.member-item a {
-    font-size: 0.95rem;
-    line-height: 1.4;
-}
-
-.level-3 { border: 4px solid #004d40; box-shadow: 0 0 15px rgba(255, 215, 0, 0.5); }
-.level-2 { border: 4px solid #004d40; }
-.level-1 { border: 4px solid #004d40; }
-
-
-
+/* LIST VIEW */
 #members.list {
     display: flex;
     flex-direction: column;
-    padding: 0;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden; /* Contains the border-radius */
+    gap: 1rem;
 }
 
 #members.list .member-item {
-    /* Layout for horizontal row */
-    display: grid;
-    /* Columns: Name, Address, Phone, Website, Level */
-    grid-template-columns: 2.5fr 3fr 1.5fr 1fr 0.5fr; 
-    gap: 15px;
-    padding: 15px 20px;
+    display: block;
     text-align: left;
-    box-shadow: none;
-    border: none;
-    border-bottom: 1px solid #eee;
-    align-items: center;
-    background-color: white;
-    border-radius: 0;
-    transition: background-color 0.2s;
 }
 
-#members.list .member-item:hover {
-    background-color: #f5f5f5;
-    transform: none;
-    box-shadow: none;
-}
-
-#members.list .member-item:last-child {
-    border-bottom: none;
-}
-
-/* Hide elements not suitable for a concise list row */
-#members.list .member-item img,
-#members.list .member-item .slogan,
-#members.list .member-item hr {
-    display: none;
-}
-
-/* Reduce vertical space and prevent wrapping in list view */
-#members.list p,
-#members.list a,
-#members.list h3 {
-    margin: 0;
-    white-space: nowrap; 
-    overflow: hidden;
-    text-overflow: ellipsis; 
-}
-
-/* --- Footer --- */
+/* ============================
+   FOOTER
+============================ */
 footer {
-    background-color:#004d40;
+    background: var(--primary-color);
     color: white;
     text-align: center;
-    padding: 1.5rem 2rem;
-    font-size: 0.9rem;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    padding: 1.5rem;
     margin-top: 2rem;
+}
+
+/* ============================
+   DESKTOP MEDIA QUERY
+============================ */
+@media screen and (min-width: 768px) {
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+    }
+
+    #menuButton {
+        display: none;
+    }
+
+    nav ul {
+        display: flex !important;
+        flex-direction: row;
+        gap: 1.5rem;
+        background: none;
+    }
+
+    nav li a {
+        border-bottom: none;
+        padding: 0.5rem 1rem;
+    }
+
+    /* WEATHER → 3-day forecast row */
+    #forecast {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    /* SPOTLIGHTS → Row */
+    #spotlightContainer {
+        flex-direction: row;
+    }
+
+    /* DIRECTORY GRID */
+    #members.grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .member-item img {
+        width: 100px;
+    }
+
+    /* LIST VIEW Desktop */
+    #members.list .member-item {
+        display: grid;
+        grid-template-columns: 2.5fr 3fr 2fr 1.2fr 1fr;
+        gap: 15px;
+        border-bottom: 1px solid #ccc;
+    }
+
+    #members.list .member-item img,
+    #members.list .member-item hr,
+    #members.list .member-item .slogan {
+        display: none;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
+        padding: 1.5rem 2rem;
+    }
 }

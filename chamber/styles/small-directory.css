@@ -1,150 +1,244 @@
+/* style-mobile.css */
 
+/* ============================
+   GLOBAL VARIABLES
+============================ */
+:root {
+    --primary-color: #004d40;
+    --secondary-color: #ffca28;
+    --light-color: #ffffff;
+    --dark-color: #222;
+    --radius: 10px;
+}
+
+/* ============================
+   BASE STYLES (Mobile-First Default)
+============================ */
 body {
-    font-family: lato, sans-serif;
+    font-family: "Lato", sans-serif;
+    margin: 0 auto;
+    max-width: 1400px;
+    background: #41b45a;
     color: #333;
-    overflow-x: hidden; 
 }
 
-main {
-    padding: 1rem;
-}
-
-h1, h2 {
-    color: #004d40; 
-}
-
-header {
-    background-color: #004d40;
-    color: white;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    position: relative;
+main section, 
+.view-toggle {
     padding-left: 1rem;
     padding-right: 1rem;
 }
 
-header h1 {
-    color: white;
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+/* ============================
+   HEADER + NAV (Mobile: Hamburger Menu)
+============================ */
+header {
+    background: var(--primary-color);
+    color: var(--light-color);
+    padding: 1rem;
+    text-align: center;
 }
 
-/* Hamburger button positioning */
 #menuButton {
-    display: block;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
     background: none;
     border: none;
+    font-size: 2rem;
     color: white;
-    font-size: 1.5rem;
     cursor: pointer;
-    z-index: 100;
 }
 
 nav ul {
-    /* Initially hidden by default */
-    display: none; 
+    display: none;
     flex-direction: column;
-    width: 100%;
-    list-style: none;
-    padding: 0;
+    background: var(--primary-color);
     margin: 0;
+    padding: 0;
 }
 
-nav ul#navMenu.open {
+nav ul.open {
     display: flex;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    padding-top: 10px;
+}
+
+nav li {
+    list-style: none;
 }
 
 nav li a {
+    display: block;
+    padding: 1rem;
     color: white;
     text-decoration: none;
-    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.25);
+}
+
+nav li a.active {
+    background: rgba(255,255,255,0.25);
+}
+
+/* ============================
+   HERO SECTION (Index)
+============================ */
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
     display: block;
+    height: auto;
+}
+
+.hero-text {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.4);
+    color: var(--light-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     text-align: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem;
 }
 
-nav li:last-child a {
-    border-bottom: none;
+.cta-button {
+    display: inline-block;
+    background: var(--secondary-color);
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 50px;
+    color: var(--dark-color);
+    margin-top: 1rem;
+    font-weight: 700;
 }
 
-/* --- Directory Views --- */
+/* ============================
+   EVENTS SECTION
+============================ */
+.events .event-card {
+    background: #004d40;
+    color: white;
+    padding: 1rem;
+    border-left: 5px solid var(--secondary-color);
+    margin-bottom: 1rem;
+    border-radius: var(--radius);
+}
 
-/* Grid View on Mobile: Always a single column */
+/* ============================
+   WEATHER SECTION
+============================ */
+.weather {
+    background: #004d40;
+    color: white;
+    padding: 1rem;
+    border-radius: var(--radius);
+}
+
+#current-weather-display {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+}
+
+#forecast {
+    display: flex;
+    flex-direction: column; /* Stack vertically on mobile */
+    gap: 0.5rem;
+}
+
+/* ============================
+   SPOTLIGHTS (Mobile: Stacked Column)
+============================ */
+#spotlightContainer {
+    display: flex;
+    background-color: #004d40;
+    color: white;
+    flex-direction: column; /* Stack vertically on mobile */
+    gap: 1rem;
+    padding: 1rem; 
+}
+
+#spotlightContainer div {
+    background: white;
+    padding: 1rem;
+    border-radius: var(--radius);
+}
+
+/* ============================
+   DIRECTORY PAGE (Mobile Layouts)
+============================ */
+
+/* Toggle buttons */
+.view-toggle {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.view-toggle button {
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.view-toggle .active {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* GRID VIEW (Mobile: Single Column) */
 #members.grid {
     display: grid;
-    grid-template-columns: 1fr; 
-    gap: 20px;
-    padding: 0;
-    margin: 1rem 0;
+    grid-template-columns: 1fr;
+    gap: 1rem;
 }
 
 .member-item {
-    border: 1px solid #ddd;
+    background: white;
     padding: 1rem;
+    border-radius: var(--radius);
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    background-color: white;
-    border-radius: 6px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
 }
 
 .member-item img {
-    max-width: 100px; /* Logos smaller on mobile */
+    width: 120px;
+    max-width: 100%; 
     height: auto;
-    margin-bottom: 10px;
-    border-radius: 4px;
+    border-radius: 5px;
 }
 
-.member-item h3 {
-    font-size: 1.2rem;
-    color: #004d40;
-}
-
-/* List View on Mobile: Stacked elements as a single column */
+/* LIST VIEW (Mobile: Stacked with Logo) */
 #members.list {
     display: flex;
     flex-direction: column;
-    gap: 0;
+    gap: 1rem;
 }
 
 #members.list .member-item {
-    /* Stack elements vertically for readability on small screens */
-    display: flex;
-    flex-direction: column;
+    display: flex; 
+    align-items: center;
     text-align: left;
-    padding: 12px 10px;
-    border-bottom: 1px solid #eee;
-    border-radius: 0;
-    box-shadow: none;
+    gap: 15px; 
+    padding: 1rem;
 }
 
-/* Hide elements not necessary in the dense list view */
-#members.list .member-item img,
-#members.list .member-item .slogan,
-#members.list .member-item hr {
-    display: none;
+#members.list .member-item img {
+    width: 60px; 
+    flex-shrink: 0; 
 }
 
-#members.list p,
-#members.list a {
-    margin: 0.2rem 0;
-    font-size: 0.9rem;
-}
 
+/* ============================
+   FOOTER
+============================ */
 footer {
-    background-color: #333;
+    background: var(--primary-color);
     color: white;
     text-align: center;
-    padding: 1rem;
-    font-size: 0.8rem;
-    display: block; 
-}
-
-footer p {
-    margin: 0.3rem 0;
+    padding: 1.5rem;
+    margin-top: 2rem;
 }
