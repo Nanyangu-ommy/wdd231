@@ -215,6 +215,74 @@ nav li a.active {
 }
 
 /* ============================
+   JOIN PAGE DESKTOP LAYOUT
+============================ */
+@media screen and (min-width: 768px) {
+
+    .join-container {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 2rem;
+        padding: 2rem;
+    }
+    .form-section, .info-section {
+        background-color: #004d40;
+        color: white;
+        padding: 2rem;
+        border-radius: var(--radius);
+    }
+
+    .membership-cards {
+        margin-top: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .open-modal-button {
+        color: white;
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+
+    .membership-card {
+        background-color: #004d40;
+        color: white;
+        text-align: left;
+
+    }
+}
+
+     
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+    background: white;
+    margin: 10% auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 8px;
+}
+
+.close {
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+/* ============================
    FOOTER
 ============================ */
 footer {

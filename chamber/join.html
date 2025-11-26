@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Join Lilongwe Chamber of Commerce. Supporting local business growth and community development." />
+    <meta name="author" content="Omega Nanseta" />
+    <title>Join Lilongwe Chamber of Commerce | Join</title>
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Facebook Meta -->
+    <meta property="og:title" content="Lilongwe Chamber of Commerce" />
+    <meta property="og:description" content="Join the Lilongwe Chamber of Commerce to connect with local businesses and grow your network." />
+    <meta property="og:image" content="images/chamber-preview.jpg" />
+    <meta property="og:url" content="https://yourusername.github.io/wdd231/chamber/directory.html" />
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small-directory.css"> 
+    <link rel="stylesheet" href="styles/larger-directory.css"> 
+
+    <script src="scripts/join.js" defer></script>
+
+    <body>
+
+    <header>
+        <h1>Join Lilongwe Chamber of Commerce</h1>
+        <nav>
+            <button id="menuButton">☰</button>
+            <ul id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <!-- GRID WRAPPER — form + cards -->
+        <div class="join-container">
+
+            <!-- LEFT SIDE FORM -->
+            <section class="form-section">
+                <h2>Membership Application</h2>
+
+                <form method="get" action="thankyou.html">
+
+                    <label>
+                        First Name
+                        <input type="text" name="firstName" autocomplete="given-name">
+                    </label>
+
+                    <label>
+                        Last Name
+                        <input type="text" name="lastName" autocomplete="family-name">
+                    </label>
+
+                    <label>
+                        Organizational Title 
+                        <input type="text" name="orgTitle" 
+                               pattern="[A-Za-z\s\-]{7,}" 
+                               title="Only letters, spaces, hyphens. Minimum 7 characters.">
+                    </label>
+
+                    <label>
+                        Email
+                        <input type="email" name="email" autocomplete="email" required placeholder="example@email.com">
+                    </label>
+
+                    <label>
+                        Mobile Phone
+                        <input type="tel" name="phone" autocomplete="tel" required>
+                    </label>
+
+                    <label>
+                        Organization Name
+                        <input type="text" name="organization" autocomplete="organization" required>
+                    </label>
+
+
+                    <label>
+                        Membership Level
+                        <select name="membership">
+                            <option value="np">NP Membership</option>
+                            <option value="bronze">Bronze</option>
+                            <option value="silver">Silver</option>
+                            <option value="gold">Gold</option>
+                        </select>
+                    </label>
+
+                    
+                    <label>
+                        Business Description
+                        <textarea name="description"></textarea>
+                    </label>
+
+                    
+
+                    <!-- hidden timestamp -->
+                    <input type="hidden" id="timestamp" name="timestamp">
+
+                    <input type="submit" value="Submit Application">
+                </form>
+            </section>
+
+            <!-- MEMBERSHIP CARDS RIGHT SIDE -->
+            <section class="membership-cards">
+
+                <div class="membership-card">
+                    <h3>NP Membership</h3>
+                    <p>For non-profit organizations. Free membership.</p>
+                    <a href="#" class="open-modal" data-target="npModal">More info</a>
+                </div>
+
+                <div class="membership-card">
+                    <h3>Bronze Membership</h3>
+                    <p>Basic tier with networking benefits.</p>
+                    <a href="#" class="open-modal" data-target="bronzeModal">More info</a>
+                </div>
+
+                <div class="membership-card">
+                    <h3>Silver Membership</h3>
+                    <p>Includes advertising and business listing.</p>
+                    <a href="#" class="open-modal" data-target="silverModal">More info</a>
+                </div>
+
+                <div class="membership-card">
+                    <h3>Gold Membership</h3>
+                    <p>Premium tier with spotlight features.</p>
+                    <a href="#" class="open-modal" data-target="goldModal">More info</a>
+                </div>
+
+            </section>
+
+        </div>
+
+        <!-- MODALS -->
+        <div id="npModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>NP Membership</h2>
+                <p>Non-profit organizations enjoy free membership with access to events and resources.</p>
+            </div>
+        </div>
+
+        <div id="bronzeModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Bronze Membership</h2>
+                <p>Includes networking opportunities and discounted event fees.</p>
+            </div>
+        </div>
+
+        <div id="silverModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Silver Membership</h2>
+                <p>Business listing, advertising space, and priority event invitations.</p>
+            </div>
+        </div>
+
+        <div id="goldModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Gold Membership</h2>
+                <p>All benefits plus homepage spotlight and premium exposure.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Lilongwe Chamber of Commerce</p>
+        <p>🌸Developed by Omega Nanseta | WDD 231🌸</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+
+</body>
+</html>
+
