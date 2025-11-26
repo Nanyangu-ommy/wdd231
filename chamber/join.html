@@ -54,8 +54,6 @@
 
                 <form method="get" action="thankyou.html">
 
-                    <form method="get" action="thankyou.html">
-
     <label for="fname">First Name</label>
     <input type="text" id="fname" name="firstName" autocomplete="given-name" required title="Enter your first name">
 
@@ -64,7 +62,7 @@
 
     <label for="orgtitle">Organizational Title</label>
     <input type="text" id="orgtitle" name="orgTitle" 
-           autocomplete="organization-title"
+           autocomplete="organization-title" 
            pattern="[A-Za-z\s\-]{7,}" 
            title="Enter your organizational title (Only letters, spaces, hyphens. Minimum 7 characters.)">
 
@@ -85,26 +83,25 @@
         <option value="gold">Gold</option>
     </select>
 
-    
     <label for="orgdesc">Business Description</label>
     <textarea id="orgdesc" name="description" required title="Provide a brief description of your business"></textarea>
-
 
     <input type="hidden" id="timestamp" name="timestamp">
 
     <button type="submit">Submit Application</button>
+
 </form>
 
-                   
+                    
 
             <!-- MEMBERSHIP CARDS RIGHT SIDE -->
-            <section class="membership-cards">
+   <section class="membership-cards">
 
-                <div class="membership-card">
-                    <h3>NP Membership</h3>
-                    <p>For non-profit organizations. Free membership.</p>
-                    <a href="#" class="open-modal" data-target="npModal">More info</a>
-                </div>
+        <div class="membership-card">
+             <h3>NP Membership</h3>
+             <p>For non-profit organizations. Free membership.</p>
+             <a href="#" class="open-modal" data-target="npModal">More info</a>
+         </div>
 
                 <div class="membership-card">
                     <h3>Bronze Membership</h3>
