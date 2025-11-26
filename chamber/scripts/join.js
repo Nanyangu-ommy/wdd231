@@ -43,7 +43,6 @@ openButtons.forEach(btn => {
     });
 });
 
-// Close modal when clicking the "X"
 const closeButtons = document.querySelectorAll(".modal .close");
 
 closeButtons.forEach(closeBtn => {
@@ -52,7 +51,6 @@ closeButtons.forEach(closeBtn => {
     });
 });
 
-// Close modal when clicking outside
 window.addEventListener("click", (e) => {
     modals.forEach(modal => {
         if (e.target === modal) {
