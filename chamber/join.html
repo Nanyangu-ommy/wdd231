@@ -54,63 +54,48 @@
 
                 <form method="get" action="thankyou.html">
 
-                    <label>
-                        First Name
-                        <input type="text" name="firstName" autocomplete="given-name" required title="Enter your first name">
-                    </label>
+                    <form method="get" action="thankyou.html">
 
-                    <label>
-                        Last Name
-                        <input type="text" name="lastName" autocomplete="family-name" required title="Enter your last name">
-                    </label>
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstName" autocomplete="given-name" required title="Enter your first name">
 
-                    <label>
-                        Organizational Title 
-                        <input type="text" name="orgTitle" 
-                               pattern="[A-Za-z\s\-]{7,}" 
-                               title="Only letters, spaces, hyphens. Minimum 7 characters." required title="Enter your organizational title">
-                    </label>
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastName" autocomplete="family-name" required title="Enter your last name">
 
-                    <label>
-                        Email
-                        <input type="email" name="email" autocomplete="email" required placeholder="example@email.com" required title="Enter a valid email address">
-                    </label>
+    <label for="orgtitle">Organizational Title</label>
+    <input type="text" id="orgtitle" name="orgTitle" 
+           autocomplete="organization-title"
+           pattern="[A-Za-z\s\-]{7,}" 
+           title="Enter your organizational title (Only letters, spaces, hyphens. Minimum 7 characters.)">
 
-                    <label>
-                        Mobile Phone
-                        <input type="tel" name="phone" autocomplete="tel" required>
-                    </label>
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" autocomplete="email" required placeholder="example@email.com" title="Enter a valid email address">
 
-                    <label>
-                        Organization Name
-                        <input type="text" name="organization" autocomplete="organization" required title="Enter your organization name">
-                    </label>
+    <label for="phone">Mobile Phone</label>
+    <input type="tel" id="phone" name="phone" autocomplete="tel" required title="Enter your 10-digit mobile phone number">
+
+    <label for="orgname">Organization Name</label>
+    <input type="text" id="orgname" name="organization" autocomplete="organization" required title="Enter your organization name">
+
+    <label for="membership">Membership Level</label>
+    <select id="membership" name="membership">
+        <option value="np">NP Membership</option>
+        <option value="bronze">Bronze</option>
+        <option value="silver">Silver</option>
+        <option value="gold">Gold</option>
+    </select>
+
+    
+    <label for="orgdesc">Business Description</label>
+    <textarea id="orgdesc" name="description" required title="Provide a brief description of your business"></textarea>
 
 
-                    <label>
-                        Membership Level
-                        <select name="membership">
-                            <option value="np">NP Membership</option>
-                            <option value="bronze">Bronze</option>
-                            <option value="silver">Silver</option>
-                            <option value="gold">Gold</option>
-                        </select>
-                    </label>
+    <input type="hidden" id="timestamp" name="timestamp">
 
-                    
-                    <label>
-                        Business Description
-                        <textarea name="description"></textarea required title="Provide a brief description of your business">
-                    </label>
+    <button type="submit">Submit Application</button>
+</form>
 
-                    
-
-                    <!-- hidden timestamp -->
-                    <input type="hidden" id="timestamp" name="timestamp">
-
-                    <input type="submit" value="Submit Application">
-                </form>
-            </section>
+                   
 
             <!-- MEMBERSHIP CARDS RIGHT SIDE -->
             <section class="membership-cards">
