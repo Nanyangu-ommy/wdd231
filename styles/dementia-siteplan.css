@@ -1,0 +1,35 @@
+body {
+font-family: Arial, sans-serif;
+background-color: #691004;
+margin: 20px;
+}
+
+h1 {
+    color : wheat;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+
+h2, h3 {
+color: rgb(7, 17, 128);
+font-family: Arial, sans-serif;
+}
+
+
+section {
+background: white;
+padding: 20px;
+margin-bottom: 20px;
+border-radius: 8px;
+border: 1px solid #691004;
+}
+
+
+pre {
+background: #f3f8fc;
+padding: 15px;
+border-radius: 6px;
+border: 1px solid #691004;
+overflow-x: auto;
+}
