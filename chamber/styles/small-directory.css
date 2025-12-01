@@ -341,6 +341,93 @@ input[type="submit"] {
     flex-shrink: 0; 
 }
 
+.visit-message {
+  background: #004d40;
+  color: white;
+  border-left: 4px solid #0a3d62;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+/* ------------------------------
+   DISCOVER GRID (Mobile)
+----------------------------------*/
+.discover-grid {
+  display: grid;
+  gap: 1.2rem;
+  padding: 1rem;
+}
+
+.discover-card {
+  background: #004d40;
+color: white;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.discover-card figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* No hover effects on mobile */
+.discover-card:hover img {
+  filter: none;
+}
+
+/* ------------------------------
+   BUTTON
+----------------------------------*/
+.learn-btn {
+  display: inline-block;
+  margin-top: 0.7rem;
+  padding: 0.6rem 1rem;
+  background: #0a3d62;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+}
+
+/* ------------------------------
+   MODAL
+----------------------------------*/
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: white;
+  width: 90%;
+  padding: 1rem;
+  border-radius: 10px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-content img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.close {
+  float: right;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+
 
 /* ============================
    FOOTER

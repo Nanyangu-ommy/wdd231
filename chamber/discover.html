@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Discover Lilongwe — attractions, parks, landmarks and local highlights." />
+  <meta name="author" content="Omega Nanseta" />
+  <title>Discover | Lilongwe Chamber of Commerce</title>
+
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <!-- Your site CSS (mobile first + desktop) -->
+  <link rel="stylesheet" href="styles/small-directory.css">
+  <link rel="stylesheet" href="styles/larger-directory.css" media="(min-width: 768px)">
+
+  <!-- module script to import data -->
+  <script type="module" src="scripts/discover.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <h1>Discover Lilongwe Chamber of Commerce</h1>
+    <nav>
+      <button id="menuButton" aria-controls="navMenu" aria-expanded="false">☰</button>
+      <ul id="navMenu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="discover.html" class="active">Discover</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="discover-page">
+
+    <section id="visitMessage" class="visit-message" aria-live="polite"></section>
+
+    <section id="discoverGrid" class="discover-grid" aria-label="Discover Lilongwe">
+
+    </section>
+  </main>
+
+  <div id="learnModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-content" role="document">
+      <button class="close" aria-label="Close">×</button>
+      <h2 id="modalTitle"></h2>
+      <figure id="modalFigure"><img src="" alt="" /></figure>
+      <address id="modalAddress"></address>
+      <p id="modalDesc"></p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Lilongwe Chamber of Commerce</p>
+    <p>🌸Developed by Omega Nanseta | WDD 231🌸</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+
+</body>
+</html>
