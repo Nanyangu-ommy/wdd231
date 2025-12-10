@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Dementia Hub — Home</title>
+
+  <meta name="description" content="Dementia Hub: local info, caregiver support, and resources for Malawi." />
+  <meta name="author" content="Omega Ommy Nanseta" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Dementia Hub — Home" />
+  <meta property="og:description" content="Local dementia awareness, caregiver guidance, and connections in Malawi." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/og-image.jpg" />
+  <meta property="og:url" content="http://www.dementia.com/dementia/index.html" />
+
+  <!-- favicon -->
+   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/small-dementia.css" />
+  <link rel="stylesheet" href="styles/large-dementia.css" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- JS Modules -->
+  <script type="module" src="scripts/dementia.js"></script>
+
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+
+      <a class="brand" href="index.html">
+        <img 
+          src="images/logo2.png" 
+          alt="Dementia Hub logo"
+          width="56" 
+          height="56"
+        />
+        <div>
+          <h1>Dementia Hub</h1>
+          <p class="tag">Learn · Understand · Support</p>
+        </div>
+      </a>
+
+      <button 
+        id="nav-toggle"
+        aria-expanded="false"
+        aria-controls="main-nav"
+        aria-label="Toggle navigation">
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+
+      <nav id="main-nav" class="main-nav" role="navigation" aria-label="Main">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="learn.html">Learn</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="container">
+    
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <h2 id="hero-title">Welcome to Dementia Hub</h2>
+
+        <p>
+          Understanding dementia starts here. Together we can raise awareness, support caregivers,
+          and promote early detection in Malawi. Reliable, easy-to-understand information created
+          to support caregivers, families, and communities.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn primary" href="learn.html">Start Learning</a>
+          <a class="btn outline" href="contact.html">Contact Us</a>
+        </div>
+      </div>
+
+      <figure class="hero-image">
+        <img 
+          src="images/dementia-hero.jpg" 
+          alt="caregiver support"
+          loading="lazy"
+          width="500"
+          height="400"
+        />
+      </figure>
+    </section>
+
+    <section class="highlights" aria-labelledby="highlight-title">
+      <h3 id="highlight-title">Dementia Quick Facts</h3>
+
+      <div class="grid">
+        
+        <article class="card">
+          <h4>What is Dementia?</h4>
+          <p>
+            Dementia is a general term for conditions that affect the brain and cause decline in memory,
+            thinking, behavior, and daily activities. <strong>Dementia is NOT witchcraft.</strong>
+          </p>
+          <a href="learn.html#what-is">Read more</a>
+        </article>
+
+        <article class="card">
+          <h4>Early Signs</h4>
+          <p>Recognize symptoms early to support loved ones effectively.</p>
+          <a href="learn.html#Early-Signs">See signs</a>
+        </article>
+
+        <article class="card">
+          <h4>Care Tips</h4>
+          <p>Practical everyday tips to help caregivers reduce stress.</p>
+          <a href="learn.html#care-tips">Learn tips</a>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Dementia Hub</p>
+      <p>🌸 Developed by Omega Ommy Nanseta | WDD 231 🌸</p>
+      <p><a href="https://www.loom.com/share/6f9d9a7be9e240fc9642aed4a9191300">Video &amp; Demo</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>

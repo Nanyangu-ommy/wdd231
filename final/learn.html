@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Dementia Awareness Hub — Learn</title>
+
+  <meta name="description" content="Learn about dementia symptoms, early signs, care tips, and support resources in Malawi." />
+  <meta name="author" content="Omega Nanseta" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Dementia Awareness Hub — Learn" />
+  <meta property="og:description" content="Explore dementia facts, early signs, care tips and research-based resources." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/og-image.jpg" />
+  <meta property="og:url" content="http://www.yourwebsite.com/dementia/learn.html" />
+
+  <!-- favicon -->
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/small-dementia.css" />
+  <link rel="stylesheet" href="styles/large-dementia.css" />
+
+  <!-- JS Modules -->
+
+  <script type="module" src="scripts/dementia.js" defer></script>
+</head>
+
+<body>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+
+      <a class="brand" href="index.html">
+        <img src="images/logo2.png" alt="Dementia Hub logo" width="56" height="56" >
+          
+
+        <div>
+          <h1>Dementia Hub</h1>
+          <p class="tag">Learn · Understand · Support</p>
+        </div>
+      </a>
+
+      <button 
+        id="nav-toggle"
+        aria-expanded="false"
+        aria-controls="main-nav"
+        aria-label="Toggle navigation">
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+
+      <nav id="main-nav" class="main-nav" role="navigation" aria-label="Main Navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="learn.html" aria-current="page">Learn</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section aria-labelledby="learn-title" class="learn-section">
+      <h2 id="learn-title">Learn About Dementia</h2>
+
+      <p class="section-intro">
+        Here you’ll find simple, research-based information about dementia.  
+        These 15 items include early signs, symptoms, care tips, and support tools.
+      </p>
+
+      <!-- GRID CONTAINER for JS -->
+      <div id="learn-grid" class="learn-grid">
+        <!-- JS will dynamically insert 15 cards here -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- MODAL (hidden by default) -->
+  <dialog id="info-modal" class="info-modal" aria-labelledby="modal-title">
+    <button class="modal-close" id="modal-close" aria-label="Close modal">✖</button>
+    <h3 id="modal-title"></h3>
+    <img id="modal-image" alt="" loading="lazy" />
+    <p id="modal-description"></p>
+    <p id="modal-category"></p>
+    <p id="modal-severity"></p>
+  </dialog>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Dementia Hub</p>
+      <p>🌸 Developed by Omega Nanseta | WDD 231 🌸</p>
+      <p><a href="https://www.loom.com/share/6f9d9a7be9e240fc9642aed4a9191300">Video &amp; Demo</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>

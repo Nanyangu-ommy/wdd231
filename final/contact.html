@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Dementia Hub — Contact</title>
+
+  <meta name="description" content="Contact Dementia Awareness Hub for caregiver questions, support, and community resources in Malawi." />
+  <meta name="author" content="Omega Nanseta" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Dementia Hub — Contact" />
+  <meta property="og:description" content="Reach out for dementia support, information and community help in Malawi." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/og-image.jpg" />
+  <meta property="og:url" content="http://www.dementia.com/dementia/contact.html" />
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/small-dementia.css" />
+  <link rel="stylesheet" href="styles/large-dementia.css" />
+
+  <!-- JS -->
+  <script type="module" src="scripts/dementia.js"></script>
+</head>
+
+<body>
+
+<header class="site-header" role="banner">
+  <div class="container header-inner">
+
+    <a class="brand" href="index.html">
+      <img src="images/logo2.png" alt="Dementia Hub logo" width="56" height="56" >
+      <div>
+        <h1>Dementia Hub</h1>
+        <p class="tag">Learn · Understand · Support</p>
+      </div>
+    </a>
+
+    <button id="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation">
+      <span class="hamburger" aria-hidden="true"></span>
+    </button>
+
+    <nav id="main-nav" class="main-nav" role="navigation" aria-label="Main Navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="learn.html">Learn</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+
+  </div>
+</header>
+
+<main class="container">
+
+  <section aria-labelledby="contact-title" class="contact-section">
+    <h2 id="contact-title">Contact Us</h2>
+
+    <p class="section-intro">
+      Have questions about dementia, caregiving, or community support?  
+      Send us a message and we’ll get back to you as soon as possible.
+    </p>
+
+    <form action="thankyou.html" method="get" class="contact-form">
+
+      <fieldset>
+        <legend>Your Information</legend>
+
+        <label for="name">Full Name *</label>
+        <input id="name" name="name" type="text" required minlength="2" />
+
+        <label for="email">Email Address *</label>
+        <input id="email" name="email" type="email" required />
+
+        <label for="phone">Phone Number</label>
+        <input id="phone" name="phone" type="tel" pattern="[0-9\\-\\+ ]{7,15}" />
+      </fieldset>
+
+      <fieldset>
+        <legend>Your Message</legend>
+
+        <label for="subject">Subject *</label>
+        <input id="subject" name="subject" type="text" required minlength="3" />
+
+        <label for="message">Your Message *</label>
+        <textarea id="message" name="message" rows="5" required minlength="5"></textarea>
+      </fieldset>
+
+      <button class="btn primary" type="submit">Send Message</button>
+
+    </form>
+  </section>
+
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container footer-inner">
+    <p>&copy; <span id="year"></span> Dementia Hub</p>
+    <p>🌸 Developed by Omega Nanseta | WDD 231 🌸</p>
+    <p><a href="https://www.loom.com/share/6f9d9a7be9e240fc9642aed4a9191300">Video &amp; Demo</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

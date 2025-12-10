@@ -1,0 +1,53 @@
+/* ======== large-dementia.css ======== */
+
+@media (min-width: 700px) {
+  /* Navigation */
+  .main-nav {
+    display: flex !important;
+    flex-direction: row;
+  }
+
+  .main-nav ul {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  /* Hero Section */
+  .hero {
+    flex-direction: row;
+    text-align: left;
+    justify-content: space-between;
+    padding: 4rem 0;
+  }
+
+  .hero-inner {
+    flex: 1;
+    padding-right: 1rem;
+  }
+
+  .hero-image {
+    flex: 1;
+    padding-left: 1rem;
+  }
+
+  /* Highlights / Cards */
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Learn Page Cards */
+  .learn-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  /* Footer */
+  .site-footer {
+    font-size: 0.9rem;
+  }
+}

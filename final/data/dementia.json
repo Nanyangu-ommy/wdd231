@@ -1,0 +1,117 @@
+[
+  {
+    "id": 1,
+    "title": "Memory Loss",
+    "category": "Early Sign",
+    "severity": "Common",
+    "description": "Memory loss affecting daily life is often the first sign of dementia. This includes forgetting names, recent events, or repeatedly asking the same questions."
+  },
+  {
+    "id": 2,
+    "title": "Confusion With Time",
+    "category": "Symptom",
+    "severity": "Moderate",
+    "description": "People with dementia may lose track of dates and events. They may feel unsure about where they are or how they arrived somewhere."
+  },
+  {
+    "id": 3,
+    "title": "Difficulty Completing Tasks",
+    "category": "Early Sign",
+    "severity": "Moderate",
+    "description": "Simple daily tasks like cooking, cleaning, or managing money become harder because of changes in memory and thinking ability."
+  },
+  {
+    "id": 4,
+    "title": "Speech and Language Problems",
+    "category": "Symptom",
+    "severity": "Moderate",
+    "description": "Finding the right words, repeating phrases, or stopping mid-sentence are common signs as brain connections weaken."
+  },
+  {
+    "id": 5,
+    "title": "Misplacing Items",
+    "category": "Early Sign",
+    "severity": "Mild",
+    "description": "People may put things in unusual places—clothes in the fridge, keys in a cooking pot—and struggle to retrace their steps."
+  },
+  {
+    "id": 6,
+    "title": "Mood Changes",
+    "category": "Behavior",
+    "severity": "Moderate",
+    "image": "images/items/mood.webp",
+    "description": "Dementia can cause sudden mood swings, irritability, anxiety, or withdrawal from family and community activities."
+  },
+  {
+    "id": 7,
+    "title": "Personality Changes",
+    "category": "Behavior",
+    "severity": "Severe",
+    "image": "images/items/personality.webp",
+    "description": "A person may become suspicious, fearful, or confused about loved ones. These changes occur due to disruptions in brain function."
+  },
+  {
+    "id": 8,
+    "title": "Poor Judgment",
+    "category": "Symptom",
+    "severity": "Moderate",
+    "image": "images/items/judgment.webp",
+    "description": "Common signs include giving away money, leaving the house unlocked, or making unsafe choices without realizing the danger."
+  },
+  {
+    "id": 9,
+    "title": "Reduced Social Participation",
+    "category": "Behavior",
+    "severity": "Mild",
+    "image": "images/items/social.webp",
+    "description": "People may avoid friends, stop attending church, or lose interest in hobbies they previously enjoyed."
+  },
+  {
+    "id": 10,
+    "title": "Caregiver Burnout",
+    "category": "Care Tip",
+    "severity": "High Concern",
+    "image": "images/items/caregiver.webp",
+    "description": "Caring for a person with dementia is emotionally and physically demanding. Caregivers must rest, ask for help, and take breaks."
+  },
+  {
+    "id": 11,
+    "title": "Healthy Eating",
+    "category": "Care Tip",
+    "severity": "Recommended",
+    "image": "images/items/healthy-eating.webp",
+    "description": "Nutritious foods—fruits, vegetables, whole grains, and water—can improve brain function and help manage symptoms."
+  },
+  {
+    "id": 12,
+    "title": "Routine and Structure",
+    "category": "Care Tip",
+    "severity": "Recommended",
+    "image": "images/items/routine.webp",
+    "description": "A predictable daily routine reduces confusion, improves mood, and helps the person feel secure."
+  },
+  {
+    "id": 13,
+    "title": "Physical Activity",
+    "category": "Care Tip",
+    "severity": "Recommended",
+    "image": "images/items/activity.webp",
+    "description": "Walking, light stretching, or gentle exercises help improve blood flow to the brain and reduce behavioral symptoms."
+  },
+  {
+    "id": 14,
+    "title": "Dementia Is Not Witchcraft",
+    "category": "Awareness",
+    "severity": "Critical Message",
+    "image": "images/items/not-witchcraft.webp",
+    "description": "Dementia is a medical brain condition, not a curse or spiritual punishment. Removing stigma helps families seek early support."
+  },
+  {
+    "id": 15,
+    "title": "Early Medical Checkup",
+    "category": "Awareness",
+    "severity": "Important",
+    "image": "images/items/checkup.webp",
+    "description": "Visiting a clinic early helps diagnose the condition, rule out other illnesses, and start treatment that slows progression."
+  }
+]
